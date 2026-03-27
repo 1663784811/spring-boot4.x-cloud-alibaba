@@ -13,8 +13,6 @@ public class SpringGatewayApplication {
     public static void main(String[] args) {
         ConfigurableApplicationContext run = SpringApplication.run(SpringGatewayApplication.class, args);
 
-
-
         log.info("===============   启动成功  ====================");
         log.info("http://127.0.0.1:9000");
 
