@@ -23,6 +23,7 @@
 
     <modules>
         <module>../spring-gateway</module>
+        <module>../admin-user</module>
     </modules>
 
     <dependencies>

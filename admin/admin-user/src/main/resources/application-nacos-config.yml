@@ -1,0 +1,11 @@
+# Nacos Config 配置
+spring:
+  cloud:
+    nacos:
+      config:
+        enabled: true
+        server-addr: localhost:8848
+        group: DEFAULT_GROUP
+        file-extension: yml
+        username: nacos
+        password: nacos
