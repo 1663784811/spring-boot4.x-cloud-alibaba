@@ -1,21 +1,3 @@
 spring:
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848
-        username: nacos
-        password: nacos
-        enabled: true
-      config:
-        server-addr: localhost:8848
-        username: nacos
-        password: nacos
-        enabled: true
-        file-extension: yml
-        group: DEFAULT_GROUP
   profiles:
-    active: dev
-
-logging:
-  level:
-    com.alibaba.cloud.nacos: DEBUG
+    active: log,nacos-config,nacos-discovery
