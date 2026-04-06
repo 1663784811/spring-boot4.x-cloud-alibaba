@@ -6,4 +6,7 @@ spring:
         username: nacos
         password: nacos
         enabled: true
+        # 配置服务注册的IP地址
+        ip: 192.168.140.38
+        port: 9000
 
