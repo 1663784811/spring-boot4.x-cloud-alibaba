@@ -1,7 +1,9 @@
 # 日志配置
 logging:
   level:
-    com.cyyaw.admin.order: INFO
+    com.cyyaw.admin.auth: INFO
     org.springframework.web: INFO
+    org.springframework.cloud: INFO
+    com.alibaba.nacos: INFO
     org.hibernate.SQL: DEBUG
     org.hibernate.type.descriptor.sql.BasicBinder: TRACE
