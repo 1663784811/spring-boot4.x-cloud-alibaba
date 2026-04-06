@@ -25,6 +25,7 @@
         <module>../spring-gateway</module>
         <module>../admin-user</module>
         <module>../admin-order</module>
+        <module>../admin-auth</module>
     </modules>
 
     <dependencies>
