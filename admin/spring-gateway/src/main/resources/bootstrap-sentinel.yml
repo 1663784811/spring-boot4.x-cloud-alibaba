@@ -1,0 +1,12 @@
+# Local Sentinel rules (fallback when Nacos is not available)
+spring:
+  cloud:
+    sentinel:
+      filter:
+        enabled: false
+      datasource:
+        ds1:
+          file:
+            file: classpath:sentinel-rules.json
+            data-type: json
+            rule-type: gw-flow
