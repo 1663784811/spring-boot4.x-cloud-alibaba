@@ -6,16 +6,16 @@ spring:
     active: log,nacos-config,nacos-discovery
   cloud:
     gateway:
-      discovery:
-        locator:
-          enabled: true
-          lower-case-service-id: true
-      routes:
-        - id: admin-user
-          uri: lb://admin-user
-          predicates:
-            - Path=/user/**
-          filters:
-            - StripPrefix=1
+      server:
+        webflux:
+          routes:
+            - id: admin-user
+              uri: lb://admin-user
+              predicates:
+                - Path=/user/**
 
-
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
