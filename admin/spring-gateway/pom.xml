@@ -49,6 +49,12 @@
             <artifactId>spring-cloud-starter-bootstrap</artifactId>
         </dependency>
 
+        <!-- OpenFeign for calling auth service -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+
     </dependencies>
 
 
