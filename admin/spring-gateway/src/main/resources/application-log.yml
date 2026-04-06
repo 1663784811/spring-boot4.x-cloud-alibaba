@@ -4,9 +4,11 @@ logging:
     com.cyyaw.spring.gateway: INFO
     com.cyyaw.spring.gateway.filter: DEBUG
     org.springframework.cloud.gateway: DEBUG
+    org.springframework.cloud.gateway.filter.ratelimit: DEBUG
     org.springframework.web.reactive: DEBUG
     org.springframework.cloud.loadbalancer: DEBUG
     org.springframework.cloud.openfeign: DEBUG
+    org.springframework.data.redis: INFO
     com.alibaba.cloud.nacos: DEBUG
     org.springframework.web.server.adapter.HttpWebHandlerAdapter: DEBUG
 

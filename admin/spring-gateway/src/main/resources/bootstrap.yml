@@ -1,15 +1,28 @@
+server:
+  port: 9000
+
 spring:
   application:
     name: spring-gateway
-
-
-
-
-
-
-
-
-
-
-
-
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        enabled: true
+        ip: 192.168.140.38
+        port: 9000
+      config:
+        server-addr: localhost:8848
+        username: nacos
+        password: nacos
+        enabled: true
+        file-extension: yml
+        group: DEFAULT_GROUP
+  config:
+    import:
+      - optional:nacos:${spring.application.name}
+      - optional:nacos:${spring.application.name}-nacos-discovery
+      - optional:nacos:${spring.application.name}-nacos-config
+      - optional:classpath:application-redis.yml
