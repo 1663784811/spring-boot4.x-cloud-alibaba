@@ -1,4 +1,4 @@
-package com.cyyaw.spring.user;
+package com.cyyaw.admin.user;
 
 
 import org.springframework.web.bind.annotation.GetMapping;
