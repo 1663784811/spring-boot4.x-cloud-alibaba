@@ -3,7 +3,7 @@ server:
 
 spring:
   profiles:
-    active: log,nacos-config,nacos-discovery,redis
+    active: log,nacos-config,nacos-discovery
   cloud:
     gateway:
       discovery:
@@ -14,24 +14,32 @@ spring:
           uri: lb://admin-user
           predicates:
             - Path=/user/**
-          filters:
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 10
-                redis-rate-limiter.burstCapacity: 20
-                redis-rate-limiter.requestedTokens: 1
-                key-resolver: "#{@ipKeyResolver}"
         - id: admin-auth
           uri: lb://admin-auth
           predicates:
             - Path=/auth/**
-          filters:
-            - name: RequestRateLimiter
-              args:
-                redis-rate-limiter.replenishRate: 5
-                redis-rate-limiter.burstCapacity: 10
-                redis-rate-limiter.requestedTokens: 1
-                key-resolver: "#{@ipKeyResolver}"
+
+    # Sentinel configuration
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+      datasource:
+        ds1:
+          nacos:
+            server-addr: localhost:8848
+            username: nacos
+            password: nacos
+            data-id: spring-gateway-sentinel-rules
+            group-id: DEFAULT_GROUP
+            data-type: json
+            rule-type: gw-flow
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
 
 management:
   endpoints:

@@ -25,4 +25,4 @@ spring:
       - optional:nacos:${spring.application.name}
       - optional:nacos:${spring.application.name}-nacos-discovery
       - optional:nacos:${spring.application.name}-nacos-config
-      - optional:classpath:application-redis.yml
+      - optional:classpath:application-sentinel.yml
