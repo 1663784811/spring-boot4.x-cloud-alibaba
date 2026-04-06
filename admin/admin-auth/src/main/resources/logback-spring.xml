@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
     <!-- 日志输出路径 -->
-    <property name="LOG_HOME" value="./logs/admin-order"/>
+    <property name="LOG_HOME" value="./logs/admin-auth"/>
 
     <!-- 控制台日志输出格式 -->
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
@@ -13,10 +13,10 @@
 
     <!-- 文件日志输出格式 -->
     <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
-        <file>${LOG_HOME}/admin-order.log</file>
+        <file>${LOG_HOME}/admin-auth.log</file>
         <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
             <!-- 每天生成一个日志文件 -->
-            <fileNamePattern>${LOG_HOME}/admin-order.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
+            <fileNamePattern>${LOG_HOME}/admin-auth.%d{yyyy-MM-dd}.%i.log</fileNamePattern>
             <!-- 保留30天的日志 -->
             <maxHistory>30</maxHistory>
             <!-- 单个日志文件最大100MB -->
