@@ -1,14 +1,6 @@
-# Bootstrap 配置
+server:
+  port: 9001
+
 spring:
   application:
-    name: spring-user
-  profiles:
-    active: nacos-config,nacos-discovery,log
-  cloud:
-    nacos:
-      config:
-        server-addr: localhost:8848
-        file-extension: yml
-        group: DEFAULT_GROUP
-      discovery:
-        server-addr: localhost:8848
+    name: admin-user

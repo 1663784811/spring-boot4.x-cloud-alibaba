@@ -1,11 +1,9 @@
-# Nacos Discovery 配置
 spring:
   cloud:
     nacos:
       discovery:
-        enabled: true
         server-addr: localhost:8848
         username: nacos
         password: nacos
-        metadata:
-          version: 1.0.0
+        enabled: true
+
